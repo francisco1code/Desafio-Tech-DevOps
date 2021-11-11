@@ -1,0 +1,39 @@
+version: '3'
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./prod/Dockerfile
+    ports:
+      - '3333:3000'
+    volumes:
+      - .:/app
+    networks:
+      - devops-net  
+
+  nginx:
+    container_name: nginx    
+    build:      
+      context: .
+      dockerfile: ./prod/Dockerfile-nginx
+    depends_on:      
+      - frontend    
+    ports:      
+      - 80:80
+    networks:
+      - devops-net  
+    volumes:
+      - static-data:/var/www/app_name/public
+
+
+
+volumes:
+  app:
+  static-data:
+
+networks:
+  devops-net:
+ 
+
+
