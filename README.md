@@ -30,7 +30,8 @@ Cria as imagens e sobem todos os conatineres
 ### `Make clean`: 
 Apaga todos os containeres, imagens e volumes.
 
-Acesse a aplicação [http://localhost/80](http://localhost/80)
+### `Acesse a aplicação`:
+ [http://localhost/80](http://localhost/80)
 
 
 
