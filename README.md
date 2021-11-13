@@ -1,5 +1,7 @@
 # Desafio Thech Devops
 
+Foi criado um page para detalhar oque foi feito, segue o **[LINK](https://francisco1code.github.io/Desafio-Tech-DevOps/#/)**
+
 
 ## Pré-requisitos
 Para que o projeto rode perfeitamente na sua maquina vamos precisar dos seguintes requisitos.
