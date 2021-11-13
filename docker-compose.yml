@@ -1,7 +1,5 @@
-#the docker compose file version
 version: "3.3"
-# you can run multiple services inside one docker compose file
-# define them with their dependencies one after the other
+
 services:
   
   react-prod:
