@@ -11,7 +11,7 @@ services:
       dockerfile:
         prod/Dockerfile
     ports:
-      - "3333:3333"
+      - "3333:3000"
     networks:
       - devops-net 
 
