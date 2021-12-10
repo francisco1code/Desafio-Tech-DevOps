@@ -1,4 +1,6 @@
-FROM node:10.16.3
+FROM node:alpine
+
+LABEL Maintainer="Frexco"
 
 RUN mkdir app
 
@@ -6,6 +8,7 @@ WORKDIR /app
 
 ADD . /app
 
-RUN yarn install
+RUN npm install
 
-CMD ["yarn","start"]
+CMD ["npm","start"]
+

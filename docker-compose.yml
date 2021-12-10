@@ -1,39 +1,20 @@
-version: '3'
+#the docker compose file version
+version: "3.3"
+# you can run multiple services inside one docker compose file
+# define them with their dependencies one after the other
 services:
-  frontend:
-    container_name: frontend
+  # service 1 named react-prod
+  react-prod:
+    container_name: react-prod
     build:
       context: .
-      dockerfile: ./prod/Dockerfile
+      dockerfile:
+        prod/Dockerfile
     ports:
-      - '3333:3000'
-    volumes:
-      - .:/app
+      - "3333:80"
     networks:
-      - devops-net  
-
-  nginx:
-    container_name: nginx    
-    build:      
-      context: .
-      dockerfile: ./prod/Dockerfile-nginx
-    depends_on:      
-      - frontend    
-    ports:      
-      - 80:80
-    networks:
-      - devops-net  
-    volumes:
-      - static-data:/var/www/app_name/public
-
-
-
-volumes:
-  app:
-  static-data:
+      - devops-net 
+      
 
 networks:
   devops-net:
- 
-
-
